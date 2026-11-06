@@ -1,0 +1,3 @@
+window.NUTRITION_CONFIG = {
+    apiKey: 'PASTE_YOUR_SPOONACULAR_API_KEY_HERE'
+};

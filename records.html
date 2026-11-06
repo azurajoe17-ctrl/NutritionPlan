@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>NutritionPlan | Food Records</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+<header>
+    <div class="brand">🥗 Nutrition<span>Plan</span></div>
+    <nav>
+        <a href="index.html">Explore Food</a>
+        <a class="active" href="records.html">Food Intake Records</a>
+    </nav>
+</header>
+<main>
+    <section class="hero small">
+        <div class="eyebrow">YOUR FOOD DIARY</div>
+        <h1>Daily <em>food intake.</em></h1>
+        <p>Save your meals, edit serving quantities and track your nutrition totals.</p>
+    </section>
+<section class="summary" id="totals">
+    <div class="metric">
+        <span>Calories</span>
+        <strong>0 kcal</strong>
+    </div>
+    <div class="metric">
+        <span>Protein</span>
+        <strong>0 g</strong>
+    </div>
+    <div class="metric">
+        <span>Carbs</span>
+        <strong>0 g</strong>
+    </div>
+    <div class="metric">
+        <span>Fat</span>
+        <strong>0 g</strong>
+    </div>
+</section>
+<section class="panel">
+    <h2>Add a food record</h2>
+    <p class="muted">Use Search Food to add API-based foods, or enter your own values per serving below.</p>
+    <form id="foodForm" class="record-form">
+        <input type="hidden" id="editId">
+        <label>Food name<input id="foodName" required maxlength="100" placeholder="e.g. Homemade sandwich"></label>
+        <label>Servings<input id="servings" type="number" min="0.1" max="100" step="0.1" value="1" required></label>
+        <label>Calories / serving (kcal)<input id="calories" type="number" min="0" max="10000" step="0.1" required></label>
+        <label>Protein / serving (g)<input id="protein" type="number" min="0" max="1000" step="0.1" required></label>
+        <label>Carbs / serving (g)<input id="carbs" type="number" min="0" max="1000" step="0.1" required></label>
+        <label>Fat / serving (g)<input id="fat" type="number" min="0" max="1000" step="0.1" required></label>
+        <div class="actions">
+            <button id="saveBtn" type="submit">Save record</button>
+            <button type="button" class="secondary" id="cancelBtn">Clear form</button>
+        </div>
+    </form>
+    <div id="formStatus" class="status" role="status"></div>
+</section>
+<section>
+    <div class="section-head">
+        <h2>Saved records</h2>
+        <span id="recordCount" class="muted"></span>
+    </div>
+    <div id="recordList" class="records"></div>
+</section>
+</main>
+<script src="shared.js"></script>
+<script src="records.js"></script>
+</body>
+</html>

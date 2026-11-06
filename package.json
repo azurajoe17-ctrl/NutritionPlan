@@ -1,0 +1,12 @@
+{
+    "name": "nutritionplan",
+    "version": "1.0.0",
+    "description": "Food nutrition Electron application",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "devDependencies": {
+        "electron": "^33.4.11"
+    }
+}

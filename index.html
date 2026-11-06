@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>NutritionPlan | Explore</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+    <div class="brand">🥗 Nutrition<span>Plan</span></div>
+    <nav>
+        <a class="active" href="index.html">Explore Food</a>
+        <a href="records.html">Food Intake Records</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="eyebrow">SMART FOOD JOURNAL</div>
+        <h1>Know your food.<br><em>Plan your day.</em></h1>
+        <p>Discover nutritional information, find food ideas that fit your preferences, and save your daily intake.</p>
+    </section>
+<section class="panel">
+    <h2>Find food or recipes</h2>
+    <p class="muted">Powered by Spoonacular. Nutrition values are shown per recipe serving.</p>
+    <div class="search"><input id="query" placeholder="Try chicken, salad, rice, banana..." aria-label="Food search"><button id="searchBtn">Search food</button></div>
+    <div id="status" class="status" role="status"></div>
+</section>
+<section class="panel">
+    <div class="section-head">
+        <h2>Diet suggestions</h2>
+        <span class="muted">Based on nutrition data</span>
+    </div>
+    <div class="filters">
+        <label>Diet goal
+            <select id="diet">
+                <option value="balanced">Balanced</option>
+                <option value="protein">High protein (≥ 20g)</option>
+                <option value="fat">Low fat (≤ 10g)</option>
+                <option value="carb">Lower carb (≤ 30g)</option>
+            </select>
+        </label>
+        <button class="secondary" id="suggestBtn">Suggest from results</button>
+    </div>
+    <div id="suggestions" class="status">Search first to see suggestions.</div>
+</section>
+<section>
+    <div class="section-head">
+        <h2>Search results</h2>
+        <span id="resultCount" class="muted"></span>
+    </div>
+    <div id="results" class="cards">
+        <div class="empty">Your food results will appear here.</div>
+    </div>
+</section>
+</main>
+<script src="config.js"></script>
+<script src="shared.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
