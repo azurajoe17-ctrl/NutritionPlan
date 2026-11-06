@@ -1,0 +1,11 @@
+
+# Dependencies
+node_modules/
+
+# API key and private configuration
+renderer/config.js
+.env
+
+# System files
+.DS_Store
+Thumbs.db
